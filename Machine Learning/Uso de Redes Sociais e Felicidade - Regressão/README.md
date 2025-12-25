@@ -1,35 +1,35 @@
-## Project Overview
+## Descrição do Projeto
 
-In this project, we work with a datased that correlates social media usage, sleep quality, stress levels and exercise habits to a Happiness Index, which ranges from 1 to 10. We aim to build a Machine Learning that can predict a person's happiness levels by analysing their routines. 
+Neste projeto, trabalhamos com um banco de dados que contém informações de uma pesquisa fictícia aplicada a usuários de redes sociais. Os usuários responderam perguntas relacionadas ao tempo de uso de mídias sociais, qualidade de sono, níveis de stress, hábitos de exercício e níveis de felicidade. Nosso objetivo é criar um modelo de Machine Learning que consiga prever qual o nível de felicidade de uma pessoa com base em características da sua rotina.
 
-The dataset contains the following columns:
+Os dados contém as seguintes colunas:
 
 | Variable | Type | Description |
 | -------- | ---- | ----------- |
-|**User_ID**| int | number to designate each participant in the survey.|
-|**Age**| int | participant's age.|
-|**Gender**| str| participant's gender (Male, Female or Other).|
-|**Daily Screen Time (hrs)**| int | average number of hours the participant uses digital screens.|
-|**Sleep Quality**| int | how the participant rated their sleep quality, ranging from 1 (terrible) to 10 (perfect).|
-|**Stress Level**| int| how the participant rated their stress level, ranging from 1 to 10. In the source material, there is no explanation on how the score was calculated. Therefore, we do not know for sure if 1 is a very low stress level or a very high stress level. For this work, we will assume 1 is very low stress, and 10 is a terrible stress level.|
-|**Days without Social Media**| int | largest period the user has gone without checking their social media profiles, in days.|
-|**Exercise Frequency**| int | number of times the participant exercises in a week.|
-|**Social Media Platform** | str | participant's most used social media platform.|
-|**Happiness Index**| int | how the participant rated their happiness level, ranging from 1 (very unhappy) to 10 (very happy). This is our target feature to predict.|
+|**User_ID** (ID do usuário)| int | Número que designa o participante na pesquisa.|
+|**Age** (Idade)| int | Idade do participante.|
+|**Gender** (Gênero)| str| Gênero do participante (Masculino, Feminino or Outro).|
+|**Daily Screen Time (hrs)** (Tempo  de tela diário, em horas)| int | Número médio de horas que o participante passa diariamente utilizando aparelhos eletrônicos.|
+|**Sleep Quality** (Qualidade do sono)| int | Nota que o participante deu para sua qualidade do sono, de 1 (terrível) a 10 (perfeito).|
+|**Stress Level** (Nível de stress)| int| Nota que o participante deu para seu nível de stress, de 1 a 10. Na fonte dos dados, não há explicação sobre como estes dados foram obtidos. Para este projeto, assumiremos que 1 é um nível muito baixo de stress, e 10 é um nível muito alto. |
+|**Days without Social Media** (Dias sem redes sociais) | int | Período mais longo que o usuário passou sem utilizar suas redes sociais, em dias.|
+|**Exercise Frequency** (Frequência de exercício) | int | Número de vezes que o participante se exercita em uma semana. |
+|**Social Media Platform** (Rede social preferida) | str | Plataforma de rede social que o participante mais utiliza.|
+|**Happiness Index** (Nível de Felicidade)| int | Nota que o participante deu para seu nível de felicidade, de 1 (extremamente infeliz) a 10 (extremamente feliz). Esta é a nossa variável alvo para predição.|
 
-## Project Outline
+## Organização do Projeto
 
-### Preprocessing
+### Pré-processamento de variáveis
 
-In this phase, we standardize column names and string entries, transforming them to lowercase and replacing blank spaces by underscores. We drop the 'User ID' column, since it is not relevant for our analysis. Lastly, we set the 'Gender' and 'Social Media Platform' to the 'category' type.
+Nesta fase, começamos por padronizar os nomes de colunas e as entradas de texto, deixando-as todas em letras minúsculas e substituindo espaços em branco por _. Descartamos as colunas 'User ID' (ID do usuário), uma vez que ela não é relevante para nossa análise. Por fim, transformamos as variáveis 'Gender' (Gênero) e 'Social Media Platform' (Rede social preferida) para o tipo 'category'. 
 
-### Exploratory Data Analysis
+### Análise Exploratória de Dados
 
-We begin our analysis by checking if there are any missing values in our dataset, or any duplicated rows. We find no missing values or duplicated rows. We then take a look at our numerical variables and see if they agree with our common sense, as to avoid errors. The maximum amount of times a participant exercised in a week was 7, which sounds possible. All the variables that range from 1 to 10 are between these values, as seen by their minimum and maximum values. The participants' ages vary from 16 to 49, which is reasonable. Therefore, our dataset seems to be ok, and not present any errors caused by wrong values.
+Começamos nossa análise checando se existem valores em branco ou linhas duplicadas nos dados, que necessitam de transformação. Vemos que este não é o caso deste dataset, então seguimos para a próxima parte. Observamos os valores númericos nos dados, para checar se eles concordam com o senso comum e com os pressupostos que temos sobre nossos valores. O número máximo de vezes que um participante se exercitou em uma semana foi 7, o que é possível. Diversas variáveis possuem, como pressuposto, valores no intervalo de 1 a 10. Vemos que os valores mínimos e máximos destas colunas estão realmente dentro deste intervalo, e nosso pressuposto está correto. As idades dos participantes variam de 16 a 49, um intervalo razoável. Portanto, os dados aparentam estarem corretos, sem valores que foram alterados devido a erros.
 
-Then, we check the unique values present in our categorical features. This information will be relevant in next sessions, when we need to encode this information. We see 3 options for gender (Male, Female and Other), and many different options for the preferred Social Media Platform. 
+Então, checamos os valores presentes nas colunas categóricas, para ver se não temos nenhum caso de erros de digitação. Vemos 3 opções para gênero (Masculino, Feminino e Outro), e diversas opções válidas para a rede social preferida.
 
-We follow by performing an univariate analysis, to understand how our variables are distributed in our dataset. Our main takeaways are:
+Performamos uma análise univariacional, para entender a distribuição de variáveis no dataset. Nossas principais conclusões são:
 
 - **Age** (Mean: 32.98, Median: 34, Standard Deviation: 9.96, Skewness: -0.12) follows an almost uniform distribution, with no outliers. Younger users may be more prone to high social media usage, and therefore may present a lower happiness index. This could be an important feature for our predictive models. This relation will be further analysed soon. The only necessary transformation for this data is scaling/standardizing.
 - **Daily Screen Time** (Mean: 5.53, Median: 5.6, Standard Deviation: 1.73, Skewness: 0.03) follows an almost perfect normal distribution, confirmed by the graph and the low skewness value. We see one outlier with screen time higher than 10 hours a day, which we will maintain in the dataset. In a real-life situation, it would be interesting to separate screen time at work (doing work related tasks), and screen time at leisure time. Participants that work with computers may show a high daily screen time, but not necessarily a high social media usage. It would be interesting to see if it is only social media usage that impacts the participant's happiness levels, or if it is the daily screen time as a whole. There is no need to perform any transformation in this feature.
