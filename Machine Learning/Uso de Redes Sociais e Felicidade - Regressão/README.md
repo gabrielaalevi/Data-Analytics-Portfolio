@@ -1,4 +1,4 @@
-## Descrição do Projeto
+## :dart: Descrição do Projeto
 
 Neste projeto, trabalhamos com um banco de dados que contém informações de uma pesquisa fictícia aplicada a usuários de redes sociais. Os usuários responderam perguntas relacionadas ao tempo de uso de mídias sociais, qualidade de sono, níveis de stress, hábitos de exercício e níveis de felicidade. Nosso objetivo é criar um modelo de Machine Learning que consiga prever qual o nível de felicidade de uma pessoa com base em características da sua rotina.
 
@@ -17,13 +17,13 @@ Os dados contém as seguintes colunas:
 |**Social Media Platform** (Rede social preferida) | str | Plataforma de rede social que o participante mais utiliza.|
 |**Happiness Index** (Nível de Felicidade)| int | Nota que o participante deu para seu nível de felicidade, de 1 (extremamente infeliz) a 10 (extremamente feliz). Esta é a nossa variável alvo para predição.|
 
-## Organização do Projeto
+## :memo: Organização do Projeto
 
-### Pré-processamento de variáveis
+### :straight_ruler: Pré-processamento de variáveis
 
 Nesta fase, começamos por padronizar os nomes de colunas e as entradas de texto, deixando-as todas em letras minúsculas e substituindo espaços em branco por _. Descartamos as colunas 'User ID' (ID do usuário), uma vez que ela não é relevante para nossa análise. Por fim, transformamos as variáveis 'Gender' (Gênero) e 'Social Media Platform' (Rede social preferida) para o tipo 'category'. 
 
-### Análise Exploratória de Dados
+### :bar_chart: Análise Exploratória de Dados
 
 Começamos nossa análise checando se existem valores em branco ou linhas duplicadas nos dados, que necessitam de transformação. Vemos que este não é o caso deste dataset, então seguimos para a próxima parte. Observamos os valores númericos nos dados, para checar se eles concordam com o senso comum e com os pressupostos que temos sobre nossos valores. O número máximo de vezes que um participante se exercitou em uma semana foi 7, o que é possível. Diversas variáveis possuem, como pressuposto, valores no intervalo de 1 a 10. Vemos que os valores mínimos e máximos destas colunas estão realmente dentro deste intervalo, e nosso pressuposto está correto. As idades dos participantes variam de 16 a 49, um intervalo razoável. Portanto, os dados aparentam estarem corretos, sem valores que foram alterados devido a erros.
 
@@ -60,17 +60,15 @@ In face of the information above, we have some variables that may not be relevan
 
 For social media platform, age and days without social media, there was no substantial correlation with the other variables. Therefore, it is safe to affirm these variables are not good predictors and will be dropped of our data. However, the gender variable carries some interesting information. For participants who execise more than 3 times a week, women tend to have significantly higher happiness levels than men. Hence, we keep this column. 
 
-### Label Encoding
+### :card_file_box: Processamento de dados
 
 We encode the 'gender' feature using one-hot encoding.
-
-### Data Split
 
 In this section, we split our data into training and testing sets. In the EDA session, we noticed our dataset presents more high happiness index values than lower instances. This could lead to an overrepresentation bias in our models. Hence, we use a SMOTE technique to oversample the dataset and guarantee we will have equal proportions of each index present. We also stratify our training and testing sets by happiness index, so both of them will have an equal amount of each happiness level value.
 
 All the numerical features we employ in the model range between 1 and 10, therefore there is no need to scale our data.
 
-### Model Training
+### :robot: Model Training
 
 Finally, we train our models. We employ RMSE and NRMSE to evaluate our models, since this is the best metric for regression problems without outliers. We also employ cross-validation for all models, and grid search to fine tune some hyperparameters. The models trained are:
 
