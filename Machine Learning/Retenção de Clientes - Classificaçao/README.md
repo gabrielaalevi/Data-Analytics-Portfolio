@@ -1,4 +1,4 @@
-## Descrição do Projeto
+## :dart: Descrição do Projeto
 
 Neste projeto, trabalhamos com um banco de dadaos de clientes de um banco fictício. Nosso objetivo é prever quais clientes deixaram o banco (realizaram o churn) e quais mantiveram suas contas, usando dados como score de crédito, país de residência, tempo de contrato e balanço da conta, entre outras. Com isto, é possível implementar um programa de retenção de clientes focado em especificamente em indivíduos com altas chances de deixar o banco.
 
@@ -24,13 +24,13 @@ O banco de dados contém as seguintes colunas:
 |**Card Type** (Tipo de Cartão) | str | Tipo de cartão do cliente. Os tipos possíveis são Prata (Silver), Ouro (Gold), Platina (Platinum) e Diamante (Diamond).|
 |**Points Earned** (Pontos obtidos)| int | Pontos obtidos pelo cliente ao utilizar o cartão de crédito.|
 
-## Organização do Projeto
+## :memo: Organização do Projeto
 
-### Pré-processamento de variáveis
+### :straight_ruler: Pré-processamento de variáveis
 
 Nesta sessão, nós padronizamos o nome das colunas e as variáveis de texto, deixando todas com letra minúscula e substituindo os espaços em branco por _. Também removemos as colunas "Customer Id" (Id do cliente) e "Surname" (Sobrenome), uma vez que elas não são relevantes para nosso algoritmo de Machine Learning. Checamos os dados para ver se existem valores em branco ou linhas duplicadas nos dados, que precisam ser transformados. Descobrimos que este não é o caso, então seguimos nossa análise. Por último, convertemos todas as variáveis categóricas para o tipo 'category', além de colunas com números inteiros mas que representam categorias usando one-hot encoding ('Exited' (Saiu), 'Complained' (Reclamou' e 'Satisfation Score' (Nível de Satisfação)).
 
-### Análise Exploratória de Dados
+### :bar_chart: Análise Exploratória de Dados
 
 Para esta parte, analisamos nossos dados para entender suas principais características e as relações entre variáveis. Primeiro, começamos fazendo uma análise univariacional, criando gráficos de frequência para variáveis categóricas e histogramas e gráficos de caixa para variáveis numéricas. Esta análise nos permite chegar em algumas conclusões:
 
@@ -50,12 +50,12 @@ Para esta parte, analisamos nossos dados para entender suas principais caracter�
 - **Satisfaction Score** (Nível de Satisfação) é distribuído uniformemente, com um pequeno pico em 3. Valores baixos podem ser bons preditores de clientes que pretendem deixar os serviços do banco, mas a distribuição uniforme pode reduzir seu poder preditivo. 
 - **Card Type** (Tipo de cartão) é distribuído uniformemente, porém é improvável que esta variável carregue informações extras além do que está contido na variável Balance (Saldo), uma vez que o tipo de cartão que o cliente possui é normalmente determinado pelo saldo em conta.
 
-### Engenharia de variáveis (Feature engenieering)
+### :microscope: Engenharia de variáveis (Feature engenieering)
 
 Antes de continuarmos com nossa Análise Exploratória, é importante criar a variável 'HasZero Balance', de forma a estudá-la em comparação com as outras colunas.
 
 
-### Análise Exploratória de Dados Parte II
+### :chart_with_upwards_trend:	 Análise Exploratória de Dados Parte II
 
 Agora, podemos conduzir uma análise bivariacional, focando nas relações entre colunas do banco de dados. Primeiro, começamos estudando a variação na taxa de churning (taxa de saída de clientes) causada por mudanças em cada coluna do dataset. Criamos também um mapa de correlação entre as variáveis numéricas e binárias, o que nos aponta quais serão as principais variáveis relacionadas à taxa de churning. Este gráfico indica que as variáveis que possuem maior poder preditivo são Complain (Reclamou), HasZeroBalance (Possui saldo nulo), IsActiveMember (É membro ativo), Number of Products (N° de produtos), Balance (Saldo) e Age (Idade). No entanto, ainda é interessante observar cada coluna individualmente.
 
@@ -78,7 +78,7 @@ Por fim, investigamos a relação entre Number of Products (N° de produtos) e B
 
 Também podemos estudar este relacionamento criando um gráfico do número de produtos adquiridos pela variável Has Zero Balance (Possui saldo nulo). A maioria dos clientes que possuem somente um produto do banco possuem contas com saldo não-nulo. O raciocínio é análogo para clientes que obtiveram 3 ou 4 produtos. No entanto, a maioria dos clientes que possuem dois produtos são clientes com saldo nulo. Isto pode ser resultado de políticas do banco para oferecer benefícios melhores para clientes com saldo zero, para incentivá-los a utilizar suas contas. Mais estudos seriam necessários para confirmar esta hipótese. Os resultados do gráfico apontam para a relação observada na análise bivariacional do número de produtos obtido e no mapa de correlação: clientes que possuem 2 produtos do banco possuem maiores chances de possuir saldo zero, e também maiores chances de deixar o banco.
 
-### Processamento dos Dados
+### :card_file_box: Processamento dos Dados
 
 Agora, aplicamos os insights obtidos acima nos dados. Primeiro, aplicamos uma transformação logarítmica em Age (Idade), devido à sua distribuição assimétrica. Checamos a nova distribuição após a transformação, e vemos que a Assimetria de Age (Idade) agora é igual a 0.18. Portanto, nosso objetivo de normalizar esta variável foi atingido.
 
@@ -86,7 +86,7 @@ Então, aplicamos one-hot encoding para as variáveis 'Geography' (Geografia) e 
 
 No entanto, isto pode não ser o suficiente para balancear nossos dados. Então, aplicamos uma técnica de SMOTE de oversampling, que irá replicar exemplos aleatórios da classe minoritária (neste caso, clientes que deixaram o banco). Agora, temos certeza que nossos dados estão balanceados entre as duas categorias. Por fim, padronizamos nossos dados, para evitar problemas causados pelas diferentes ordens de grandeza entre eles.
 
-## Seleção de Modelos
+## :robot: Seleção de Modelos
 
 Nesta sessão, treinamos nossos modelos e avaliamos suas performances. Enquanto a acurácia (accuracy) seria a primeira escolha para avaliar um algoritmo de classificação como este, ela não é indicada para este caso, devido ao desbalanço original entre as categorias da variável-alvo. Ao invés disso, é necessário empregar outras métricas, como a precisão e o recall. Para este exemplo, um recall alto mas precisão baixa indica que o modelo irá enfatizar corretamente a predição de clientes que NÃO sairão do banco, com o custo de errar na predição de clientes com altas chances de deixar os serviços. O banco não perderá dinheiro dando benefícios para clientes que manteriam seus serviços ativos de qualquer jeito, mas podemos perder clientes que não foram corretamente nomeados como potenciais churners. Por outro lado, uma precisão alta mas recall baixo irá enfatizar clientes que sairão do banco, com o custo de errar nas predições de clientes que se manterão. Portanto, podemos perder dinheiro dando benefícios melhores para clientes que continuariam no banco de qualquer forma, mas conseguiremos garantir que a maioria dos clientes que são churners em potencial serão nomeados como tal. Na vida real, é possível que executivos escolham uma situação ou a outra, e neste caso uma métrica específica seria preferível. No entanto, para uma análise mais neutra, avaliaremos nossos modelos usando a métria f1-score, que leva em conta tanto a precisão quanto o recall para seu cálculo. Assim, possuímos uma solução intermediária em relação às citadas anteriormente.
 
