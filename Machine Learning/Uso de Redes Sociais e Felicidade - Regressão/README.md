@@ -81,6 +81,6 @@ Finally, we train our models. We employ RMSE and NRMSE to evaluate our models, s
 
 Therefore, we see the Random Forest Regressor was the best model in the training set. 
 
-### Hyperparameter fine-tuning
+### :mag_right: Hyperparameter fine-tuning
 
 In the previous section, we did a small grid search for the best parameters for each model, in order to find the most effective one. Now, we do another grid search for values close to the ones selected previously, to fine-tune the model. With this, we reduce the RMSE in the training test to 0.9503. Finally, we use this model to make predictions in the test set, and achieve a RMSE of 0.8953. The model has a better performance in the test set, therefore we do not need to worry about overfitting.
