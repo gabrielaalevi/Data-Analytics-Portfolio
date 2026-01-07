@@ -1,18 +1,21 @@
-📌 Descrição do Projeto
-Este projeto foi construído no curso Santander 2025 - Ciência de Dados com Python, fornecido pela plataforma Dio. O objetivo era criar um dashboard simples no Excel, utilizando uma base de dados sobre clientes que assinam o serviço Xbox Pass, para que o aluno ganhasse experiência com as ferramentas gráficas do software. Para isso, empregamos os conceitos de tabelas dinâmicas, gráficos dinâmicos e segmentadores de dados, para criar um painel que possibilitasse a fácil interpretação dos resultados.
+## :pushpin: Descrição do Projeto
 
-📁 Arquivos Disponíveis
+Este projeto foi construído com o objetivo de colocar em prática minhas habilidades com Excel. Os banco de dados original está 'sujo', com diversos valores faltando em algumas colunas. Então, realizei a limpeza dos dados (parte de transformação de uma pipeline de ETL), de forma a obter dados padronizados e prontos para a análise. Para isso, empreguei a ferramenta Power Query do Excel, que me permitiu limpar os dados de forma simples e eliminar inconsistências. Para a análise dos dados, utilizei tabelas dinâmicas e filtros segmentadores. Por fim, criei um painel que possibilita a fácil interpretação dos resultados obtidos, com gráficos dinâmicos e filtros segmentadores.
+
+## :file_folder: Arquivos Disponíveis
+
 Workbook do Excel (.xlsx): arquivo do Excel utilizado para criar o dashboard.
 
 Arquivo PNG: contém uma captura de tela do dashboard para visualização rápida.
 
-📐 Estrutura do Dashboard
+## :triangular_ruler: Estrutura do Dashboard
+
 O dashboard é composto por 4 abas, organizados da seguinte forma:
 
-Assets (escondido): Esta aba contém todos os recursos visuais utilizados no dashboard, como imagens e os códigos RGB das cores utilizadas no documento, de forma a facilitar a padronização do trabalho.
+1. Assets (escondido): Esta aba contém todos os recursos visuais utilizados no dashboard, como imagens e os códigos RGB das cores utilizadas no documento, de forma a facilitar a padronização do trabalho.
 
-Bases (escondido): Aba contendo o banco de dados utilizados.
+2. Bases (escondido): Aba contendo o banco de dados utilizados.
 
-Cálculos (escondido): Neste espaço, utilizamos ferramentas como fórmulas e tabelas dinâmicas para criar análises que serão posteriormente transferidas para o dashboard.
+3. Cálculos (escondido): Neste espaço, utilizamos ferramentas como fórmulas e tabelas dinâmicas para criar análises que serão posteriormente transferidas para o dashboard.
 
-Dashboard: painel principal do dashboard, contendo as principais informações necessárias para a tomada de decisões.
+4. Dashboard: painel principal do dashboard, contendo as principais informações necessárias para a tomada de decisões. Contém diversos gráficos, cartões com números relevantes e 3 filtros segmentadores que permitem uma análise mais específica.
