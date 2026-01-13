@@ -21,4 +21,3 @@ O projeto foi desenvolvido em etapas, organizadas de forma que:
 3. Análise Exploratória: análise dos dados nas tabelas, com o objetivo de conhecer melhor o dataset.
 
 4. Insights: obtenção de respostas para principais perguntas de negócio, utilizando comandos de SQL.
-5. 
