@@ -1,21 +1,24 @@
 ## :pushpin: Descrição do Projeto
 
-Este projeto foi construído com o objetivo de colocar em prática minhas habilidades com a linguagem SQL. Os banco de dados original está 'sujo', com diversos valores faltando em algumas colunas. Então, realizei a limpeza dos dados (parte de transformação de uma pipeline de ETL), de forma a obter dados padronizados e prontos para a análise. Para isso, empreguei a ferramenta Power Query do Excel, que me permitiu limpar os dados de forma simples e eliminar inconsistências. Para a análise dos dados, utilizei tabelas dinâmicas e filtros segmentadores. Por fim, criei um painel que possibilita a fácil interpretação dos resultados obtidos, com gráficos dinâmicos e filtros segmentadores.
+Este projeto foi construído com o intuito de colocar em prática minhas habilidades com a linguagem SQL. O banco de dados original conta com 9 tabelas relacionadas, que descrevem o sistema de vendas de uma loja de bicicletas. As tabelas são: clientes/customers (contendo informações como nome e endereço de cada cliente), funcionarios/staff (contendo informações como nome e loja de atuação para cada funcionário), pedidos/orders (número do pedido, data, data do envio, e o cliente que fez o pedido em questão), lojas/stores (endereço e informações de contato para cada loja da rede), produtos/products (lista de todos os produtos vendidos pela loja, e seu preço), categorias/categories (categorias em que os produtos vendidos se encaixam), itens de um pedido/order items (informações extras de pedidos, como quais produtos foram vendidos e em qual quantidade), estoques/stocks (informações sobre os estoques de cada loja) e marcas/brands (lista de todas as marcas que são vendidas pela loja).
+
+O objetivo do projeto é transferir os dados do banco, que estão armazenados em arquivos .csv, para o SQL, e então encontrar respostas para as principais perguntas de negócio empregando o SQL.
 
 ## :file_folder: Arquivos Disponíveis
 
-Workbook do Excel (.xlsx): arquivo do Excel utilizado para criar o dashboard.
+Arquivo comandos (.md): arquivo de texto com os comandos executados no SQL, junto com uma explicação.
 
-Arquivo PNG: contém uma captura de tela do dashboard para visualização rápida.
+Arquivos do Banco de Dados (.csv): tabelas utilizadas para o projeto.
 
-## :triangular_ruler: Estrutura do Dashboard
+## :triangular_ruler: Estrutura do Projeto
 
-O dashboard é composto por 4 abas, organizados da seguinte forma:
+O projeto foi desenvolvido em etapas, organizadas de forma que:
 
-1. Assets (escondido): Esta aba contém todos os recursos visuais utilizados no dashboard, como imagens e os códigos RGB das cores utilizadas no documento, de forma a facilitar a padronização do trabalho.
+1. Criação de tabelas e schemas no PostgreSQL: criação de cada uma das tabelas dos dados. Para isso, foi necessário definir o melhor tipo de dado para cada coluna, e criar as relações entre tabelas utilizando chaves primárias e estrangeiras.
 
-2. Bases (escondido): Aba contendo o banco de dados utilizados.
+2. Inserção de valores: importação dos dados brutos dos arquivos .csv para o PostgreSQL.
 
-3. Cálculos (escondido): Neste espaço, utilizamos ferramentas como fórmulas e tabelas dinâmicas para criar análises que serão posteriormente transferidas para o dashboard.
+3. Análise Exploratória: análise dos dados nas tabelas, com o objetivo de conhecer melhor o dataset.
 
-4. Dashboard: painel principal do dashboard, contendo as principais informações necessárias para a tomada de decisões. Contém diversos gráficos, cartões com números relevantes e 3 filtros segmentadores que permitem uma análise mais específica.
+4. Insights: obtenção de respostas para principais perguntas de negócio, utilizando comandos de SQL.
+5. 
