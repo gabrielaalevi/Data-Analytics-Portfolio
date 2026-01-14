@@ -190,7 +190,11 @@ E obtemos o output:
 
 ![Imagem 3](https://github.com/gabrielaalevi/Data-Analytics-Portfolio/blob/main/SQL/Análise%20de%20Vendas%20de%20Bicicletas/Imagens/img_3.png)
 
+Vemos que a loja Baldwin Bikes é a responsável pelo maior lucro também. Logo, é provável que as 3 lojas vendam produtos com a mesma distribuição de preço.
+
 **Pergunta de Negócio 4: onde moram a maioria dos clientes das lojas?**
+
+Para responder esta pergunta, olhamos na nossa base de dados qual o estado com maior número de clientes:
 
 ```
 SELECT
@@ -200,9 +204,15 @@ FROM customers
 GROUP BY state_adress
 ORDER BY total_customers DESC;
 ```
-(IMG 4)
+E obtemos:
+
+![Imagem 4](https://github.com/gabrielaalevi/Data-Analytics-Portfolio/blob/main/SQL/Análise%20de%20Vendas%20de%20Bicicletas/Imagens/img_4.png)
+
+Vemos que o estado com maior número de clientes é Nova York. É relevante notar que a loja Baldwin Bikes está localizada em Nova York. Logo, o estado com maior número de clientes é a localização da loja com maior número de vendas, uma conexão importante e previsível.
 
 **Pergunta de Negócio 5: quais estados compraram mais itens nos últimos dois anos?**
+
+Neste caso, executamos:
 
 ```
 SELECT
@@ -216,10 +226,15 @@ ON ord.order_id = items.order_id
 GROUP BY cust.state_adress
 ORDER BY total_sold DESC;
 ```
+E obtemos o output:
 
-(IMG 5)
+![Imagem 5](https://github.com/gabrielaalevi/Data-Analytics-Portfolio/blob/main/SQL/Análise%20de%20Vendas%20de%20Bicicletas/Imagens/img_5.png)
+
+Novamente, o estado de Nova York lidera a quantidade de vendas, devido à maior quantidade de clientes.
 
 **Pergunta de Negócio 6: quais estados geraram mais lucro nos últimos 2 anos?**
+
+Para esta pergunta, executamos a consulta:
 
 ```
 SELECT
@@ -234,7 +249,9 @@ GROUP BY cust.state_adress
 ORDER BY total_sold DESC;
 ```
 
-(IMG 6)
+E obtemos:
+
+
 
 **Pergunta de Negócio 7: quais funcionários venderam mais itens nos últimos 2 anos?**
 
