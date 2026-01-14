@@ -1,6 +1,9 @@
-Neste arquivo, apresento todos os comandos executados no PostgreSQL, junto com explicações sobre seus objetivos.
+Este projeto tem como objetivo a análise de dados de vendas de uma loja de bicicletas utilizando SQL como principal ferramenta e o PostgreSQL como plataforma. Ao longo do trabalho, são explorados dados relacionados a produtos, clientes e pedidos, com o intuito de extrair insights relevantes para o negócio e apoiar a tomada de decisão.
 
-Como primeiro passo, começamos criando as nove tabelas relacionadas:
+O arquivo reúne os códigos SQL executados, capturas de tela dos resultados obtidos e respostas a perguntas de negócio relevantes, como identificação de produtos mais vendidos, desempenho de vendas ao longo do tempo e comportamento dos clientes. O foco do projeto é demonstrar habilidades práticas em manipulação de dados, escrita de consultas SQL e interpretação de resultados no contexto de um problema real de negócio.
+
+Primeiramente, é necessário criar as nove tabelas relacionadas no PostgreSQL:
+
 ```
 CREATE TABLE brands (
 	brand_id INT PRIMARY KEY,
@@ -89,7 +92,8 @@ CREATE TABLE order_items(
 	discount FLOAT
 );
 ```
-Com as nove tabelas criadas, podemos inserir os dados dos nossos arquivos .csv no databse:
+
+Então, inserimos os dados dos arquivos .csv no banco de dados:
 
 ```
 COPY brands FROM 'C:\Program Files\PostgreSQL\Database\brands.csv' delimiter ',' CSV HEADER;
@@ -103,7 +107,7 @@ COPY stocks FROM 'C:\Program Files\PostgreSQL\Database\stocks.csv' delimiter ','
 COPY order_items FROM 'C:\Program Files\PostgreSQL\Database\order_items.csv' delimiter ',' CSV HEADER;
 ```
 
-Então, é interessante checar se nossa base de dados é consistente. Primeiro, notamos que o preço dos produtos aparecem em duas tabelas diferentes: products e order_items. Então, podemos checar se os valores são iguais nos dois campos para cada produto. Para isso, rodamos:
+Antes de iniciar a análise, é importante verificar a consistência da base de dados. O preço dos produtos está presente em duas tabelas distintas: products e order_items. Dessa forma, é necessário validar se os valores registrados nesses dois campos são consistentes para cada produto. Para realizar essa verificação, foi executada a seguinte consulta:
 
 ```
 SELECT
@@ -115,6 +119,7 @@ INNER JOIN order_items AS items
 ON p.product_id = items.product_id
 WHERE ABS(p.list_price - items.list_price)>0;
 ```
+
 Esta query retorna uma tabela vazia, o que significa que todos os preços estão concordando entre as tabelas.
 
 Agora, podemos iniciar nossa análise, tentando responder algumas perguntas de negócio relevantes.
