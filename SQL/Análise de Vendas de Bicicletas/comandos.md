@@ -107,7 +107,9 @@ COPY stocks FROM 'C:\Program Files\PostgreSQL\Database\stocks.csv' delimiter ','
 COPY order_items FROM 'C:\Program Files\PostgreSQL\Database\order_items.csv' delimiter ',' CSV HEADER;
 ```
 
-Antes de iniciar a análise, é importante verificar a consistência da base de dados. O preço dos produtos está presente em duas tabelas distintas: products e order_items. Dessa forma, é necessário validar se os valores registrados nesses dois campos são consistentes para cada produto. Para realizar essa verificação, foi executada a seguinte consulta:
+Antes de iniciar a análise, é importante verificar a consistência da base de dados. O preço dos produtos está presente em duas tabelas distintas: products e order_items. Dessa forma, é necessário validar se os valores registrados nesses dois campos são consistentes para cada produto. 
+
+Para realizar essa verificação, foi executada a seguinte consulta:
 
 ```
 SELECT
@@ -120,13 +122,11 @@ ON p.product_id = items.product_id
 WHERE ABS(p.list_price - items.list_price)>0;
 ```
 
-Esta query retorna uma tabela vazia, o que significa que todos os preços estão concordando entre as tabelas.
-
-Agora, podemos iniciar nossa análise, tentando responder algumas perguntas de negócio relevantes.
+Esta query retorna uma tabela vazia, o que significa que todos os preços estão concordando entre as tabelas. Agora, podemos iniciar nossa análise, respondendo algumas perguntas de negócio relevantes.
 
 **Pergunta de Negócio 1: quais são os itens que mais venderam nos últimos 2 anos?**
 
-Para responder esta questão, rodamos o seguinte código:
+Para responder esta questão, executamos a consulta:
 
 ```
 SELECT o.product_id,
@@ -139,9 +139,9 @@ GROUP BY o.product_id, p.product_name
 ORDER BY total_sold DESC;
 ```
 
-E obtemos como resposta:
+O output dado pelo nosso banco de dados é:
 
-(IMG 1)
+![Imagem 1](/Imagens/img_1.png)
 
 **Pergunta de Negócio 2: quais são as lojas que venderam mais itens nos últimos 2 anos?**
 
