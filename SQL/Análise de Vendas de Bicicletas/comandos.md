@@ -141,11 +141,13 @@ ORDER BY total_sold DESC;
 
 O output dado pelo nosso banco de dados é:
 
-![Imagem 1](SQL/Análise de Vendas de Bicicletas/Imagens/img_1.png)
+![Imagem 1](https://github.com/gabrielaalevi/Data-Analytics-Portfolio/blob/main/SQL/Análise%20de%20Vendas%20de%20Bicicletas/Imagens/img_1.png)
+
+Com estas informações, concluimos que os produtos mais vendidos são aqueles com IDs 7, 12, 11, 25 e 10.
 
 **Pergunta de Negócio 2: quais são as lojas que venderam mais itens nos últimos 2 anos?**
 
-Para esta questão, rodamos:
+Para responder esta pergunta, a consulta a ser executada é:
 
 ```
 SELECT 
@@ -160,11 +162,16 @@ ON o.store_id = s.store_id
 GROUP BY o.store_id, s.store_name
 ORDER BY total_sold DESC;
 ```
-E obtemos como resposta:
 
-(IMG 2)
+E obtemos como output:
+
+![Imagem 2](https://github.com/gabrielaalevi/Data-Analytics-Portfolio/blob/main/SQL/Análise%20de%20Vendas%20de%20Bicicletas/Imagens/img_2.png)
+
+Portanto, vemos que a Loja Baldwin Bikes é de longe a que mais vende produtos.
 
 **Pergunta de Negócio 3: quais lojas geraram mais lucro para a empresa nos últimos 2 anos?**
+
+Enquanto a loja Baldwin Bikes é que mais vende em termos de quantidade, é possível que o lucro não seja distribuído da mesma forma. Talvez as outras lojas direcionem seus clientes para produtos mais caros. Desta forma, enquanto a quantidade de produtos vendidos é relativamente baixa, o lucro da loja é alto. Para checar esta hipótese, executamos:
 
 ```
 SELECT 
@@ -179,7 +186,9 @@ ON o.store_id = s.store_id
 GROUP BY o.store_id, s.store_name
 ORDER BY total_profit DESC;
 ```
-(IMG 3)
+E obtemos o output:
+
+![Imagem 3](https://github.com/gabrielaalevi/Data-Analytics-Portfolio/blob/main/SQL/Análise%20de%20Vendas%20de%20Bicicletas/Imagens/img_3.png)
 
 **Pergunta de Negócio 4: onde moram a maioria dos clientes das lojas?**
 
