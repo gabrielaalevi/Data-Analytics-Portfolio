@@ -141,7 +141,7 @@ ORDER BY total_sold DESC;
 
 O output dado pelo nosso banco de dados é:
 
-![Imagem 1](/Imagens/img_1.png)
+![Imagem 1](SQL/Análise de Vendas de Bicicletas/Imagens/img_1.png)
 
 **Pergunta de Negócio 2: quais são as lojas que venderam mais itens nos últimos 2 anos?**
 
