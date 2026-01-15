@@ -124,7 +124,7 @@ WHERE ABS(p.list_price - items.list_price)>0;
 
 Esta query retorna uma tabela vazia, o que significa que todos os preços estão concordando entre as tabelas. Agora, podemos iniciar nossa análise, respondendo algumas perguntas de negócio relevantes.
 
-**Pergunta de Negócio 1: quais são os itens que mais venderam nos últimos 3 anos?**
+:handbag: **Pergunta de Negócio 1: quais são os itens que mais venderam nos últimos 3 anos?**
 
 Para responder esta questão, executamos a consulta:
 
@@ -145,7 +145,7 @@ O output dado pelo nosso banco de dados é:
 
 Com estas informações, concluimos que os produtos mais vendidos são aqueles com IDs 7, 12, 11, 25 e 10.
 
-**Pergunta de Negócio 2: quais são as lojas que venderam mais itens nos últimos 2 anos?**
+:handbag: **Pergunta de Negócio 2: quais são as lojas que venderam mais itens nos últimos 2 anos?**
 
 Para responder esta pergunta, a consulta a ser executada é:
 
@@ -169,7 +169,7 @@ E obtemos como output:
 
 Portanto, vemos que a Loja Baldwin Bikes é de longe a que mais vende produtos.
 
-**Pergunta de Negócio 3: quais lojas geraram mais lucro para a empresa nos últimos 3 anos?**
+:handbag: **Pergunta de Negócio 3: quais lojas geraram mais lucro para a empresa nos últimos 3 anos?**
 
 Enquanto a loja Baldwin Bikes é que mais vende em termos de quantidade, é possível que o lucro não seja distribuído da mesma forma. Talvez as outras lojas direcionem seus clientes para produtos mais caros. Desta forma, enquanto a quantidade de produtos vendidos é relativamente baixa, o lucro da loja é alto. Para checar esta hipótese, executamos:
 
@@ -212,7 +212,7 @@ Para obter:
 
 Neste caso, vemos que a loja Rowlett Bikes é a loja que possui maior lucro médio (ou seja, a loja que vende os produtos mais caros).
 
-**Pergunta de Negócio 4: onde moram a maioria dos clientes da rede?**
+:handbag: **Pergunta de Negócio 4: onde moram a maioria dos clientes da rede?**
 
 Para responder esta pergunta, olhamos na nossa base de dados qual o estado com maior número de clientes:
 
@@ -230,7 +230,7 @@ E obtemos:
 
 Vemos que o estado com maior número de clientes é Nova York. É relevante notar que a loja Baldwin Bikes está localizada em Nova York. Logo, o estado com maior número de clientes é a localização da loja com maior número de vendas, uma conexão importante e previsível.
 
-**Pergunta de Negócio 5: quais estados compraram mais itens nos últimos três anos?**
+:handbag: **Pergunta de Negócio 5: quais estados compraram mais itens nos últimos três anos?**
 
 Neste caso, executamos:
 
@@ -252,7 +252,7 @@ E obtemos o output:
 
 Novamente, o estado de Nova York lidera a quantidade de vendas, devido à maior quantidade de clientes.
 
-**Pergunta de Negócio 6: quantos produtos um cliente compra em média, por estado/por loja?**
+:handbag: **Pergunta de Negócio 6: quantos produtos um cliente compra em média, por estado/por loja?**
 
 Para esta pergunta, executamos a consulta:
 
@@ -276,7 +276,7 @@ E obtemos:
 
 Neste caso, vemos que os clientes das lojas Rowlett Bikes e Santa Cruz Bikes tendem a comprar mais produtos do que os clientes da loja Baldwin Bikes. Portanto, a loja Baldwin Bikes produz o maior lucro por ter o maior número de clientes, não por vender os produtos mais caros ou por vender mais produtos por cliente.
 
-**Pergunta de Negócio 7: quais funcionários venderam mais itens nos últimos 3 anos?**
+:handbag: **Pergunta de Negócio 7: quais funcionários venderam mais itens nos últimos 3 anos?**
 
 Neste caso, a query indicada é:
 
@@ -297,7 +297,7 @@ ORDER BY total_sold DESC;
 
 Vemos que Marcelene é a funcionária que vendeu a maior quantidade de produtos nos últimos 2 anos. Infelizmente, nossa base de dados não possui informações sobre quando cada funcionário foi contratado. Caso contrário, seria possível calcular o número de produtos vendidos por dia, de forma a não favorecer os funcionários mais antigos da empresa.
 
-**Pergunta de Negócio 8: quais funcionários geraram mais lucro nos últimos 2 anos?**
+:handbag: **Pergunta de Negócio 8: quais funcionários geraram mais lucro nos últimos 2 anos?**
 
 ```
 SELECT
@@ -337,7 +337,7 @@ Esta consulta retorna:
 
 Agora, vemos que Kali e Venita são as vendedoras que vendem produtos mais caros. Na tabela anterior, vimos que Kali era uma das vendedoras com menor lucro total. Neste caso, é possível que Kali tenha recebido instruções para se especializar em categorias mais caras, que normalmente recebem menos vendas. Com isso, seu lucro total será impactado, mas não seu lucro médio, como foi observado.
 
-**Pergunta de Negócio 9: quais itens receberam descontos mais vezes nos últimos 3 anos?**
+:handbag: **Pergunta de Negócio 9: quais itens receberam descontos mais vezes nos últimos 3 anos?**
 
 A consulta:
 
@@ -379,7 +379,7 @@ E obtemos:
 
 Neste caso, vemos que os itens com maior desconto também foram da linha Electra, mas não os mesmos da pergunta anterior. No entanto, o desconto total recebido por estes itens foi de 19 reais no total, o que não representa uma porcentagem significativa dos lucros da empresa.
 
-**Pergunta de Negócio 11: qual o lucro total por ano, no período analisado?**
+:handbag: **Pergunta de Negócio 11: qual o lucro total por ano, no período analisado?**
 
 Executamos a consulta:
 
@@ -396,6 +396,7 @@ ORDER BY year;
 
 E obtemos:
 
+![Imagem 11](https://github.com/gabrielaalevi/Data-Analytics-Portfolio/blob/main/SQL/Análise%20de%20Vendas%20de%20Bicicletas/Imagens/img_11.png)
 
 Notamos que as vendas diminuíram muito quando comparamos os anos de 2018 e 2017. Portanto, é interessante tentar descobrir o motivo desta queda. Podemos estudar a variação no número de produtos vendidos, executando:
 
@@ -412,7 +413,7 @@ ORDER BY year;
 
 de forma a obter:
 
-(IMG 11-1)
+![Imagem 11-1](https://github.com/gabrielaalevi/Data-Analytics-Portfolio/blob/main/SQL/Análise%20de%20Vendas%20de%20Bicicletas/Imagens/img_11.png)
 
 Vemos que a quantidade de produtos vendidos caiu bastante no ano de 2018, o que justifica a diferença entre o lucro total encontrada. É possível separar esta diferença em categorias, para entender quais foram os tipos de produto cujas vendas foram mais afetadas:
 
@@ -432,7 +433,7 @@ ON prod.category_id = cat.category_id
 GROUP BY category_name;
 ```
 
-(IMG 11-2)
+![Imagem 11-2](https://github.com/gabrielaalevi/Data-Analytics-Portfolio/blob/main/SQL/Análise%20de%20Vendas%20de%20Bicicletas/Imagens/img_11_2.png)
 
 Neste caso, vemos que as categorias Comfort Bicycles, Cruisers Bicycles, Mouintain Bikes, Cyclocross Bikes e Childrens Bikes foram as mais afetadas pela queda. Isto pode ser causado por mudanças de interesse no público geral. Já analisando as vendas por loja, executando:
 
@@ -450,8 +451,115 @@ ON ord.store_id = stores.store_id
 GROUP BY stores.store_name;
 ```
 
-(IMG 11-3)
+![Imagem 11-3](https://github.com/gabrielaalevi/Data-Analytics-Portfolio/blob/main/SQL/Análise%20de%20Vendas%20de%20Bicicletas/Imagens/img_11_3.png)
 
-Enquanto todas as lojas registraram quedas nas vendas de 2018, a loja Baldwin Bikes recebeu, em 2018, menos da metade das vendas de 2017. Portanto, seria interessante verificar o que foi alterado na loja (como corpo de funcionários, organização das lojas, propagandas) para entender o que causou esta queda.
+Enquanto todas as lojas registraram quedas nas vendas de 2018, a loja Baldwin Bikes recebeu, em 2018, menos da metade das vendas de 2017. Portanto, é interessante investigar se as outras lojas apresentaram quedas proporcionais neste período.
 
+:handbag: **Pergunta de Negócio 12: quais são as 3 categorias mais populares em cada uma das lojas? E qual foi a diferença entre as vendas de 2017 e 2018 para cada uma delas?**
+
+Para encontrar a resposta desta pergunta, executamos:
+
+```
+WITH ranked_sales AS(
+	SELECT
+		stores.store_name AS store_name,
+		cat.category_name AS category_name,
+		SUM(CASE WHEN(EXTRACT(YEAR FROM ord.order_date)) = 2016 THEN items.quantity ELSE 0 END) AS sales_2016,
+		SUM(CASE WHEN(EXTRACT(YEAR FROM ord.order_date)) = 2017 THEN items.quantity ELSE 0 END) AS sales_2017,
+		SUM(CASE WHEN(EXTRACT(YEAR FROM ord.order_date)) = 2018 THEN items.quantity ELSE 0 END) AS sales_2018,
+		RANK() OVER(PARTITION BY stores.store_name ORDER BY SUM(items.quantity) DESC) AS ranking
+	FROM orders AS ord
+	INNER JOIN order_items AS items
+	ON ord.order_id = items.order_id
+	INNER JOIN products AS prod
+	ON items.product_id = prod.product_id
+	INNER JOIN categories AS cat
+	ON prod.category_id = cat.category_id
+	INNER JOIN stores
+	ON ord.store_id = stores.store_id
+	GROUP BY stores.store_name, cat.category_name
+	ORDER BY stores.store_name DESC
+)
+SELECT
+	ranked_sales.store_name,
+	ranked_sales.category_name,
+	ranked_sales.sales_2016,
+	ranked_sales.sales_2017,
+	ranked_sales.sales_2018,
+	ranked_sales.ranking
+FROM ranked_sales
+WHERE ranking IN (1,2,3)
+ORDER BY store_name, ranking ASC;
+```
+Para obter:
+
+![Imagem 12](https://github.com/gabrielaalevi/Data-Analytics-Portfolio/blob/main/SQL/Análise%20de%20Vendas%20de%20Bicicletas/Imagens/img_12.png)
+
+Observamos que as 3 lojas possuem o mesmo top 3 de categorias mais populares: Cruisers Bicycles, Mountain Bikes e Children Bicycles. Comparando as vendas dos anos de 2017 e 2018 para a categoria Cruisers Bicycles, encontramos que a Baldwin Bikes apresentou uma queda de 64,32%, a Rowlett Bikes apresentou uma queda de 60,78%, e a Santa Cruz Bikes observou uma queda de 42,65%. Portanto, vemos que a queda na venda de bicicletas deste tipo atingiu as 3 lojas de forma similar. Este resultado aponta para duas possibilidades: ou a queda nas vendas foi causada por uma política interna implementada em todas as lojas, ou o declínio foi gerado por mudanças espontâneas no interesse do público. Dados extras seriam necessários para confirmar uma ou outra hipótese.
+
+:handbag: **Pergunta de Negócio 13: qual produto está em maior quantidade nos estoques das lojas? De acordo com os resultados de 2018, quando estes estoques devem ser repostos?**
+
+Para a primeira pergunta, executamos:
+
+```
+WITH ranked_stocks AS(
+	SELECT
+		stores.store_name AS store_name,
+		cat.category_name AS category_name,
+		SUM(stocks.quantity) AS quantity_in_stock,
+		RANK() OVER(PARTITION BY stores.store_name ORDER BY SUM(stocks.quantity) DESC) AS ranking
+	FROM stocks
+	INNER JOIN products AS prod
+	ON stocks.product_id = prod.product_id
+	INNER JOIN categories AS cat
+	ON prod.category_id = cat.category_id
+	INNER JOIN stores
+	ON stocks.store_id = stores.store_id
+	GROUP BY stores.store_name, cat.category_name
+	ORDER BY stores.store_name DESC
+)
+SELECT
+	ranked_stocks.store_name,
+	ranked_stocks.category_name,
+	ranked_stocks.quantity_in_stock,
+	ranked_stocks.ranking
+FROM ranked_stocks
+WHERE ranking IN (1,2,3)
+ORDER BY store_name, ranking ASC;
+```
+Para obter:
+
+![Imagem 13](https://github.com/gabrielaalevi/Data-Analytics-Portfolio/blob/main/SQL/Análise%20de%20Vendas%20de%20Bicicletas/Imagens/img_13.png)
+
+Para as 3 lojas, a categoria com maior estoque é a de Cruisers Bikes. Então, queremos encontrar quantas unidades foram vendidas por mês em cada loja, para sabermos como manejar o estoque desta categoria. Para isso:
+
+```
+WITH total_vendas AS(
+	SELECT
+		ord.store_id,
+		EXTRACT(MONTH FROM ord.order_date) AS month,
+		SUM(items.quantity) AS total_month
+	FROM order_items AS items
+	INNER JOIN orders AS ord
+	ON items.order_id = ord.order_id
+	WHERE items.product_id = 3
+	GROUP BY EXTRACT(MONTH FROM ord.order_date), ord.store_id
+)
+SELECT
+	stores.store_name AS nome_loja,
+	total_vendas.month AS mes,
+	
+	SUM(total_vendas.total_month) OVER(PARTITION BY stores.store_id ORDER BY total_vendas.month ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS vendidos_ano
+FROM total_vendas
+INNER JOIN stores
+ON total_vendas.store_id = stores.store_id;
+```
+
+E obter:
+
+![Imagem 13-1](https://github.com/gabrielaalevi/Data-Analytics-Portfolio/blob/main/SQL/Análise%20de%20Vendas%20de%20Bicicletas/Imagens/img_13_1.png)
+![Imagem 13-2](https://github.com/gabrielaalevi/Data-Analytics-Portfolio/blob/main/SQL/Análise%20de%20Vendas%20de%20Bicicletas/Imagens/img_13_2.png)
+![Imagem 13-3](https://github.com/gabrielaalevi/Data-Analytics-Portfolio/blob/main/SQL/Análise%20de%20Vendas%20de%20Bicicletas/Imagens/img_13_3.png)
+
+Vemos que todas as lojas possuem estoques muito maiores do que a previsão de venda para o próximo ano. Portanto, seria interessante promover ações que aumentem as vendas desta categoria, como promoções e descontos maiores.
 
