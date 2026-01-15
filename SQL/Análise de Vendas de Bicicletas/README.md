@@ -26,22 +26,22 @@ O projeto foi desenvolvido em etapas, organizadas de forma que:
 
 Os principais insights identificados a partir da análise são os seguintes:
 
-1.A loja Baldwin Bikes, localizada em Nova York, foi a que apresentou o maior volume de vendas e de lucro nos últimos três anos, sendo responsável por aproximadamente 68% das vendas totais da rede. Esse resultado está alinhado ao fato de que a maior parte dos clientes cadastrados reside no estado de Nova York.
+1. A loja Baldwin Bikes, localizada em Nova York, foi a que apresentou o maior volume de vendas e de lucro nos últimos três anos, sendo responsável por aproximadamente 68% das vendas totais da rede. Esse resultado está alinhado ao fato de que a maior parte dos clientes cadastrados reside no estado de Nova York.
 
-2.Embora a Baldwin Bikes seja a loja com maior volume de vendas, as lojas Rowlett Bikes e Santa Cruz Bikes apresentam um número maior de produtos vendidos por cliente.
+2. Embora a Baldwin Bikes seja a loja com maior volume de vendas, as lojas Rowlett Bikes e Santa Cruz Bikes apresentam um número maior de produtos vendidos por cliente.
 
-3.A Rowlett Bikes se destaca como a loja com maior lucro médio por venda.
+3. A Rowlett Bikes se destaca como a loja com maior lucro médio por venda.
 
-4.Entre os funcionários, Marcelene foi quem realizou o maior número de vendas nos últimos três anos. Entretanto, a funcionária Kali obteve o maior lucro médio por venda.
+4. Entre os funcionários, Marcelene foi quem realizou o maior número de vendas nos últimos três anos. Entretanto, a funcionária Kali obteve o maior lucro médio por venda.
 
-5.Foram concedidos diversos descontos na venda de produtos. Contudo, ao somar o valor total dos descontos por produto, observa-se que o lucro máximo “perdido” foi de apenas 19 dólares. Isso indica que, apesar da frequência de descontos, o impacto financeiro individual é bastante reduzido.
+5. Foram concedidos diversos descontos na venda de produtos. Contudo, ao somar o valor total dos descontos por produto, observa-se que o lucro máximo “perdido” foi de apenas 19 dólares. Isso indica que, apesar da frequência de descontos, o impacto financeiro individual é bastante reduzido.
 
-6.Ao comparar os anos de 2017 e 2018, observa-se uma queda aproximada de 60% nas vendas nas três lojas da rede.
+6. Ao comparar os anos de 2017 e 2018, observa-se uma queda aproximada de 60% nas vendas nas três lojas da rede.
 
-7.Esse declínio afetou todas as categorias de produtos comercializadas.
+7. Esse declínio afetou todas as categorias de produtos comercializadas.
 
-8.A loja Baldwin Bikes foi a mais impactada pela redução nas vendas, registrando em 2018 um volume de produtos vendidos inferior à metade do observado em 2017.
+8. A loja Baldwin Bikes foi a mais impactada pela redução nas vendas, registrando em 2018 um volume de produtos vendidos inferior à metade do observado em 2017.
 
-9.A categoria Cruisers Bikes, a mais popular em todas as lojas, apresentou uma queda de cerca de 60% nas lojas Baldwin Bikes e Rowlett Bikes, e de aproximadamente 42% na Santa Cruz Bikes. Esse cenário sugere duas possíveis causas: a implementação de alguma política interna comum às lojas ou uma mudança espontânea no interesse dos consumidores. Para confirmar qualquer uma dessas hipóteses, seriam necessários dados adicionais.
+9. A categoria Cruisers Bikes, a mais popular em todas as lojas, apresentou uma queda de cerca de 60% nas lojas Baldwin Bikes e Rowlett Bikes, e de aproximadamente 42% na Santa Cruz Bikes. Esse cenário sugere duas possíveis causas: a implementação de alguma política interna comum às lojas ou uma mudança espontânea no interesse dos consumidores. Para confirmar qualquer uma dessas hipóteses, seriam necessários dados adicionais.
 
-10.A categoria com maior volume de estoque é a Cruisers Bikes. Ao comparar o estoque disponível com as vendas realizadas em 2018, percebe-se que o nível de estoque em todas as lojas está significativamente acima da demanda. Recomenda-se, portanto, a adoção de ações para estimular as vendas dessa categoria, como campanhas promocionais.
+10. A categoria com maior volume de estoque é a Cruisers Bikes. Ao comparar o estoque disponível com as vendas realizadas em 2018, percebe-se que o nível de estoque em todas as lojas está significativamente acima da demanda. Recomenda-se, portanto, a adoção de ações para estimular as vendas dessa categoria, como campanhas promocionais.
