@@ -358,7 +358,7 @@ gera como output:
 
 Podemos ver que os itens Electra Townie Original 21D - 2016 e Electra Cruiser 1 (24-Inch) - 2016 receberam descontos 193 vezes neste período. No entanto, não sabemos o valor exato dos descontos recebidos.
 
-**Pergunta de Negócio 10: qual item recebeu o maior desconto total nos últimos 3 anos?**
+:handbag: **Pergunta de Negócio 10: qual item recebeu o maior desconto total nos últimos 3 anos?**
 
 Para ver qual foi o valor total dado de desconto por item neste período, executamos a consulta:
 
