@@ -24,15 +24,24 @@ O projeto foi desenvolvido em etapas, organizadas de forma que:
 
 ## :bulb: Principais Insights
 
-Os principais insights obtidos na análise foram:
+Os principais insights identificados a partir da análise são os seguintes:
 
-1. A loja Baldwin Bikes, localizada em Nova York, é a loja que gerou mais vendas (e mais lucro) nos últimos 3 anos. Ela é responsável por quase 68% das vendas totais da rede. Coincidentemente, a maioria dos clientes registrados na base moram no estado de Nova York.
-3. Apesar da loja Baldwin Bikes vender mais produtos, as lojas Rowlett Bikes e Santa Cruz Bikes vendem mais produtos por cliente.
-4. A loja Rowlett Bikes é a que gera maior lucro por venda.
-5. A funcionária Marcelene foi quem realizou mais vendas nos últimos 3 anos. No entanto, a funcionária Kali é quem gerou maior lucro por venda.
-6. Diversos descontos foram dados na compra de produtos. No entanto, somando os descontos dados por produto, o lucro 'perdido' por descontos máximo é de apenas 19 doláres. Logo, vemos que, apesar de vários descontos serem realizados, o valor individual por desconto é muito baixo.
-7. Comparando os anos de 2017 e 2018, vemos que as vendas decaíram por volta de 60% nas 3 lojas.
-8. O declínio nas vendas afetou todas as categorias de produtos vendidas pela rede.
-9. A loja Baldwin Bikes foi a loja que mais perdeu vendas. Em 2018, a quantidade de produtos vendidos foi menos da metade da quantidade de vendas de 2017.
-10. Para a categoria Cruisers Bikes, a mais popular em todas as lojas, a queda foi de aproximadamente 60% para a Baldwin Bikes e para a Rowlett Bikes, e de 42% para a Santa Cruz Bikes. Portanto, este resultado aponta para duas possibilidades: ou a queda nas vendas foi causada por uma política interna implementada em todas as lojas, ou o declínio foi gerado por mudanças espontâneas no interesse do público. Dados extras seriam necessários para confirmar uma ou outra hipótese.
-11. A categoria de produtos com maior estoque é a Cruisers Bike. Comparando com os dados de 2018, o estoque em todas as lojas é muito maior do que as vendas previstas. É indicado realizar programas para estimular a venda de produtos desta categoria, como promoções.
+1.A loja Baldwin Bikes, localizada em Nova York, foi a que apresentou o maior volume de vendas e de lucro nos últimos três anos, sendo responsável por aproximadamente 68% das vendas totais da rede. Esse resultado está alinhado ao fato de que a maior parte dos clientes cadastrados reside no estado de Nova York.
+
+2.Embora a Baldwin Bikes seja a loja com maior volume de vendas, as lojas Rowlett Bikes e Santa Cruz Bikes apresentam um número maior de produtos vendidos por cliente.
+
+3.A Rowlett Bikes se destaca como a loja com maior lucro médio por venda.
+
+4.Entre os funcionários, Marcelene foi quem realizou o maior número de vendas nos últimos três anos. Entretanto, a funcionária Kali obteve o maior lucro médio por venda.
+
+5.Foram concedidos diversos descontos na venda de produtos. Contudo, ao somar o valor total dos descontos por produto, observa-se que o lucro máximo “perdido” foi de apenas 19 dólares. Isso indica que, apesar da frequência de descontos, o impacto financeiro individual é bastante reduzido.
+
+6.Ao comparar os anos de 2017 e 2018, observa-se uma queda aproximada de 60% nas vendas nas três lojas da rede.
+
+7.Esse declínio afetou todas as categorias de produtos comercializadas.
+
+8.A loja Baldwin Bikes foi a mais impactada pela redução nas vendas, registrando em 2018 um volume de produtos vendidos inferior à metade do observado em 2017.
+
+9.A categoria Cruisers Bikes, a mais popular em todas as lojas, apresentou uma queda de cerca de 60% nas lojas Baldwin Bikes e Rowlett Bikes, e de aproximadamente 42% na Santa Cruz Bikes. Esse cenário sugere duas possíveis causas: a implementação de alguma política interna comum às lojas ou uma mudança espontânea no interesse dos consumidores. Para confirmar qualquer uma dessas hipóteses, seriam necessários dados adicionais.
+
+10.A categoria com maior volume de estoque é a Cruisers Bikes. Ao comparar o estoque disponível com as vendas realizadas em 2018, percebe-se que o nível de estoque em todas as lojas está significativamente acima da demanda. Recomenda-se, portanto, a adoção de ações para estimular as vendas dessa categoria, como campanhas promocionais.
