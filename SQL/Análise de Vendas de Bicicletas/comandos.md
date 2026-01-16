@@ -122,7 +122,7 @@ ON p.product_id = items.product_id
 WHERE ABS(p.list_price - items.list_price)>0;
 ```
 
-Esta query retorna uma tabela vazia, o que significa que todos os preços estão concordando entre as tabelas. Agora, podemos iniciar nossa análise, respondendo algumas perguntas de negócio relevantes.
+A query não retorna registros, confirmando a concordância dos preços entre as tabelas. Assim, seguimos para a análise das principais questões de negócio.
 
 :handbag: **Pergunta de Negócio 1: quais são os itens que mais venderam nos últimos 3 anos?**
 
@@ -171,7 +171,7 @@ Portanto, vemos que a Loja Baldwin Bikes é de longe a que mais vende produtos.
 
 :handbag: **Pergunta de Negócio 3: quais lojas geraram mais lucro para a empresa nos últimos 3 anos?**
 
-Enquanto a loja Baldwin Bikes é que mais vende em termos de quantidade, é possível que o lucro não seja distribuído da mesma forma. Talvez as outras lojas direcionem seus clientes para produtos mais caros. Desta forma, enquanto a quantidade de produtos vendidos é relativamente baixa, o lucro da loja é alto. Para checar esta hipótese, executamos:
+Embora a loja Baldwin Bikes lidere em volume de vendas, isso não significa necessariamente que o lucro seja distribuído da mesma forma. É possível que outras lojas direcionem seus clientes para produtos de maior valor. Assim, mesmo com uma quantidade menor de itens vendidos, o lucro dessas lojas pode ser mais elevado. Para verificar essa hipótese, executamos:
 
 ```
 SELECT 
@@ -210,7 +210,7 @@ Para obter:
 
 ![Imagem 3.5](https://github.com/gabrielaalevi/Data-Analytics-Portfolio/blob/main/SQL/Análise%20de%20Vendas%20de%20Bicicletas/Imagens/imagem_3_2_2.png)
 
-Neste caso, vemos que a loja Rowlett Bikes é a loja que possui maior lucro médio (ou seja, a loja que vende os produtos mais caros).
+Nesse cenário, observamos que a loja Rowlett Bikes apresenta o maior lucro médio, indicando que comercializa, em média, os produtos de maior valor.
 
 :handbag: **Pergunta de Negócio 4: onde moram a maioria dos clientes da rede?**
 
@@ -228,7 +228,7 @@ E obtemos:
 
 ![Imagem 4](https://github.com/gabrielaalevi/Data-Analytics-Portfolio/blob/main/SQL/Análise%20de%20Vendas%20de%20Bicicletas/Imagens/img_4.png)
 
-Vemos que o estado com maior número de clientes é Nova York. É relevante notar que a loja Baldwin Bikes está localizada em Nova York. Logo, o estado com maior número de clientes é a localização da loja com maior número de vendas, uma conexão importante e previsível.
+Observa-se que Nova York é o estado com o maior número de clientes. Vale destacar que a loja Baldwin Bikes está localizada nesse estado. Assim, o estado com mais clientes coincide com a localização da loja com maior volume de vendas, uma relação relevante e esperada.
 
 :handbag: **Pergunta de Negócio 5: quais estados compraram mais itens nos últimos três anos?**
 
@@ -274,7 +274,7 @@ E obtemos:
 
 ![Imagem 6](https://github.com/gabrielaalevi/Data-Analytics-Portfolio/blob/main/SQL/Análise%20de%20Vendas%20de%20Bicicletas/Imagens/img_6_2.png)
 
-Neste caso, vemos que os clientes das lojas Rowlett Bikes e Santa Cruz Bikes tendem a comprar mais produtos do que os clientes da loja Baldwin Bikes. Portanto, a loja Baldwin Bikes produz o maior lucro por ter o maior número de clientes, não por vender os produtos mais caros ou por vender mais produtos por cliente.
+Nesse cenário, observa-se que os clientes das lojas Rowlett Bikes e Santa Cruz Bikes tendem a adquirir mais produtos do que os clientes da Baldwin Bikes. Dessa forma, a Baldwin Bikes apresenta o maior lucro principalmente por concentrar o maior número de clientes, e não por vender produtos mais caros ou por obter um maior volume de compras por cliente.
 
 :handbag: **Pergunta de Negócio 7: quais funcionários venderam mais itens nos últimos 3 anos?**
 
@@ -295,7 +295,7 @@ ORDER BY total_sold DESC;
 
 ![Imagem 7](https://github.com/gabrielaalevi/Data-Analytics-Portfolio/blob/main/SQL/Análise%20de%20Vendas%20de%20Bicicletas/Imagens/img_7.png)
 
-Vemos que Marcelene é a funcionária que vendeu a maior quantidade de produtos nos últimos 2 anos. Infelizmente, nossa base de dados não possui informações sobre quando cada funcionário foi contratado. Caso contrário, seria possível calcular o número de produtos vendidos por dia, de forma a não favorecer os funcionários mais antigos da empresa.
+Observa-se que Marcelene foi a funcionária que vendeu a maior quantidade de produtos nos últimos dois anos. No entanto, a base de dados não contém informações sobre a data de contratação de cada funcionário. Caso esses dados estivessem disponíveis, seria possível calcular o número de produtos vendidos por dia, evitando favorecer os funcionários com mais tempo de empresa.
 
 :handbag: **Pergunta de Negócio 8: quais funcionários geraram mais lucro nos últimos 2 anos?**
 
@@ -316,7 +316,7 @@ E o output devolvido pelo SQL:
 
 ![Imagem 8](https://github.com/gabrielaalevi/Data-Analytics-Portfolio/blob/main/SQL/Análise%20de%20Vendas%20de%20Bicicletas/Imagens/img_8_2.png)
 
-Neste caso, o lucro total gerado segue a mesma ordem do número de produtos vendidos. Porém, podemos analisar qual o valor médio de cada venda feita, para ver qual funcionário vende produtos mais caros.
+Nesse caso, o lucro total gerado segue a mesma ordem do volume de produtos vendidos. Ainda assim, é possível analisar o valor médio por venda para identificar quais funcionários comercializam produtos de maior valor.
 
 ```
 SELECT
@@ -335,7 +335,7 @@ Esta consulta retorna:
 
 ![Imagem 8-2](https://github.com/gabrielaalevi/Data-Analytics-Portfolio/blob/main/SQL/Análise%20de%20Vendas%20de%20Bicicletas/Imagens/img_8_2_2.png)
 
-Agora, vemos que Kali e Venita são as vendedoras que vendem produtos mais caros. Na tabela anterior, vimos que Kali era uma das vendedoras com menor lucro total. Neste caso, é possível que Kali tenha recebido instruções para se especializar em categorias mais caras, que normalmente recebem menos vendas. Com isso, seu lucro total será impactado, mas não seu lucro médio, como foi observado.
+Agora, observamos que Kali e Venita são as vendedoras que comercializam os produtos de maior valor. Na análise anterior, vimos que Kali figurava entre as vendedoras com menor lucro total. Isso pode indicar que Kali tenha sido orientada a se especializar em categorias mais caras, que normalmente apresentam menor volume de vendas. Dessa forma, seu lucro total é impactado, mas o lucro médio permanece elevado, como observado.
 
 :handbag: **Pergunta de Negócio 9: quais itens receberam descontos mais vezes nos últimos 3 anos?**
 
@@ -377,7 +377,7 @@ E obtemos:
 
 ![Imagem 10](https://github.com/gabrielaalevi/Data-Analytics-Portfolio/blob/main/SQL/Análise%20de%20Vendas%20de%20Bicicletas/Imagens/img_10.png)
 
-Neste caso, vemos que os itens com maior desconto também foram da linha Electra, mas não os mesmos da pergunta anterior. No entanto, o desconto total recebido por estes itens foi de 19 reais no total, o que não representa uma porcentagem significativa dos lucros da empresa.
+Nesse caso, observamos que os itens com maior desconto também pertencem à linha Electra, embora não sejam os mesmos identificados na análise anterior. Ainda assim, o desconto total concedido a esses itens foi de apenas 19 reais, o que não representa uma parcela significativa dos lucros da empresa.
 
 :handbag: **Pergunta de Negócio 11: qual o lucro total por ano, no período analisado?**
 
@@ -435,7 +435,7 @@ GROUP BY category_name;
 
 ![Imagem 11-2](https://github.com/gabrielaalevi/Data-Analytics-Portfolio/blob/main/SQL/Análise%20de%20Vendas%20de%20Bicicletas/Imagens/img_11_2.png)
 
-Neste caso, vemos que as categorias Comfort Bicycles, Cruisers Bicycles, Mouintain Bikes, Cyclocross Bikes e Childrens Bikes foram as mais afetadas pela queda. Isto pode ser causado por mudanças de interesse no público geral. Já analisando as vendas por loja, executando:
+Nesse cenário, observamos que as categorias Comfort Bicycles, Cruisers Bicycles, Mountain Bikes, Cyclocross Bikes e Children’s Bikes foram as mais impactadas pela queda. Esse comportamento pode estar relacionado a mudanças no interesse do público em geral. Em seguida, ao analisar as vendas por loja, executamos:
 
 ```
 SELECT
@@ -453,7 +453,7 @@ GROUP BY stores.store_name;
 
 ![Imagem 11-3](https://github.com/gabrielaalevi/Data-Analytics-Portfolio/blob/main/SQL/Análise%20de%20Vendas%20de%20Bicicletas/Imagens/img_11_3.png)
 
-Enquanto todas as lojas registraram quedas nas vendas de 2018, a loja Baldwin Bikes recebeu, em 2018, menos da metade das vendas de 2017. Portanto, é interessante investigar se as outras lojas apresentaram quedas proporcionais neste período.
+Embora todas as lojas tenham registrado quedas nas vendas em 2018, a Baldwin Bikes teve menos da metade das vendas de 2017. Dessa forma, é relevante investigar se as demais lojas apresentaram quedas proporcionais no mesmo período.
 
 :handbag: **Pergunta de Negócio 12: quais são as 3 categorias mais populares em cada uma das lojas? E qual foi a diferença entre as vendas de 2017 e 2018 para cada uma delas?**
 
@@ -495,7 +495,7 @@ Para obter:
 
 ![Imagem 12](https://github.com/gabrielaalevi/Data-Analytics-Portfolio/blob/main/SQL/Análise%20de%20Vendas%20de%20Bicicletas/Imagens/img_12.png)
 
-Observamos que as 3 lojas possuem o mesmo top 3 de categorias mais populares: Cruisers Bicycles, Mountain Bikes e Children Bicycles. Comparando as vendas dos anos de 2017 e 2018 para a categoria Cruisers Bicycles, encontramos que a Baldwin Bikes apresentou uma queda de 64,32%, a Rowlett Bikes apresentou uma queda de 60,78%, e a Santa Cruz Bikes observou uma queda de 42,65%. Portanto, vemos que a queda na venda de bicicletas deste tipo atingiu as 3 lojas de forma similar. Este resultado aponta para duas possibilidades: ou a queda nas vendas foi causada por uma política interna implementada em todas as lojas, ou o declínio foi gerado por mudanças espontâneas no interesse do público. Dados extras seriam necessários para confirmar uma ou outra hipótese.
+Observa-se que as três lojas compartilham o mesmo top 3 de categorias mais populares: Cruisers Bicycles, Mountain Bikes e Children Bicycles. Ao comparar as vendas da categoria Cruisers Bicycles entre 2017 e 2018, a Baldwin Bikes apresentou uma queda de 64,32%, a Rowlett Bikes de 60,78% e a Santa Cruz Bikes de 42,65%. Dessa forma, a redução nas vendas desse tipo de bicicleta afetou as três lojas de maneira semelhante. Esse resultado sugere duas possibilidades: a queda pode ter sido causada por uma política interna aplicada em todas as lojas ou por alterações espontâneas no interesse do público. Dados adicionais seriam necessários para confirmar qual hipótese é a correta.
 
 :handbag: **Pergunta de Negócio 13: qual produto está em maior quantidade nos estoques das lojas? De acordo com os resultados de 2018, quando estes estoques devem ser repostos?**
 
@@ -561,5 +561,5 @@ E obter:
 ![Imagem 13-2](https://github.com/gabrielaalevi/Data-Analytics-Portfolio/blob/main/SQL/Análise%20de%20Vendas%20de%20Bicicletas/Imagens/img_13_2.png)
 ![Imagem 13-3](https://github.com/gabrielaalevi/Data-Analytics-Portfolio/blob/main/SQL/Análise%20de%20Vendas%20de%20Bicicletas/Imagens/img_13_3.png)
 
-Vemos que todas as lojas possuem estoques muito maiores do que a previsão de venda para o próximo ano. Portanto, seria interessante promover ações que aumentem as vendas desta categoria, como promoções e descontos maiores.
+Observa-se que todas as lojas apresentam estoques significativamente superiores às previsões de venda para o próximo ano. Dessa forma, seria recomendável implementar ações que estimulem as vendas desta categoria, como promoções e descontos mais agressivos.
 
