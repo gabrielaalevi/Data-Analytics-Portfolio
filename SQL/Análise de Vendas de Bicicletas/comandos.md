@@ -413,7 +413,7 @@ ORDER BY year;
 
 de forma a obter:
 
-![Imagem 11-1](https://github.com/gabrielaalevi/Data-Analytics-Portfolio/blob/main/SQL/Análise%20de%20Vendas%20de%20Bicicletas/Imagens/img_11.png)
+![Imagem 11-1](https://github.com/gabrielaalevi/Data-Analytics-Portfolio/blob/main/SQL/Análise%20de%20Vendas%20de%20Bicicletas/Imagens/img_11_1.png)
 
 Vemos que a quantidade de produtos vendidos caiu bastante no ano de 2018, o que justifica a diferença entre o lucro total encontrada. É possível separar esta diferença em categorias, para entender quais foram os tipos de produto cujas vendas foram mais afetadas:
 
