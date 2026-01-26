@@ -1,6 +1,8 @@
 ## :pushpin: Descrição do Projeto
 
-Este projeto consiste no desenvolvimento de um dashboard interativo em Power BI para a análise de dados de clientes de um banco fictício. O principal objetivo é identificar os fatores que influenciam o churn de clientes (encerramento de contas) e gerar insights que possam apoiar a criação de estratégias mais eficientes de retenção de clientes.
+Este projeto consiste no desenvolvimento de um dashboard interativo em Power BI para a análise de dados sobre as vendas de uma rede de lojas de biciletas fictícia. O principal objetivo foi colocar em prática e aprimorar minhas habilidades com Power BI, especialmente na análise e visualização de dados de vendas, buscando transformar dados brutos em informações claras e visuais para tomada de decisão.
+
+O banco de dados original conta com 9 tabelas relacionadas, que descrevem o sistema de vendas da rede. As tabelas são: clientes/customers (contendo informações como nome e endereço de cada cliente), funcionarios/staff (contendo informações como nome e loja de atuação para cada funcionário), pedidos/orders (número do pedido, data, data do envio, e o cliente que fez o pedido em questão), lojas/stores (endereço e informações de contato para cada loja da rede), produtos/products (lista de todos os produtos vendidos pela loja, e seu preço), categorias/categories (categorias em que os produtos vendidos se encaixam), itens de um pedido/order items (informações extras de pedidos, como quais produtos foram vendidos e em qual quantidade), estoques/stocks (informações sobre os estoques de cada loja) e marcas/brands (lista de todas as marcas que são vendidas pela loja).
 
 ## :file_folder: Arquivos Disponíveis
 
@@ -12,23 +14,29 @@ Arquivo PDF: contém capturas de tela de todos os painéis do dashboard para vis
 
 O dashboard é composto por 6 painéis, organizados da seguinte forma:
 
-1. Capa: Visão geral dos painéis contidos.
-
-2. Número de Serviços Contratados: Análise da relação entre a quantidade de serviços adquiridos pelo cliente e a probabilidade de encerramento da conta.
-
-3. País de Residência: Avaliação do impacto da localização geográfica do cliente na taxa de churn.
-
-4. Reclamações ao SAC: Análise do efeito do número de reclamações registradas no atendimento ao cliente sobre a decisão de deixar o banco.
-
-5. Faixa Etária: Estudo da distribuição de churn entre diferentes faixas etárias.
-
-6. Tempo de Contrato: Análise da relação entre o tempo de permanência do cliente no banco e a probabilidade de churn.
+1. Vendas, contendo informações sobre faturamento, volume de vendas, número de clientes atendidos e preço médio
+2. Estoque, comparando a quantidade de produtos em estoque e o que foi efetivamente vendido em 2018
+3. Região, contendo uma análise das vendas por estado
+4. Categoria, com dados sobre o desempenho de vendas por categoria de produto
+5. Marca, identificando as marcas mais vendidas
+6. Funcionários, avaliando o desempenho dos vendedores ao longo do ano
 
 Todos os painéis contam com filtros dinâmicos, permitindo a exploração dos dados por diferentes categorias e a realização de análises mais detalhadas e personalizadas.
 
 ## :briefcase: Análises de negócios
 
-A análise realizada por meio do dashboard permitiu identificar padrões relevantes no comportamento dos clientes, destacando os seguintes pontos:
+A análise realizada por meio do dashboard permitiu identificar padrões relevantes em diversas áreas da rede. Os principais insights foram:
+
+- As vendas caíram quase 50% em 2018, quando comparadas com o volume de vendas do ano de 2017. O número de clientes atendidos caiu em 60% no mesmo período.
+- O preço médio por produto vendido aumentou em 20%. No entanto, as vendas diminuíram em 57%, o que explica a queda no faturamento.
+- O mês com maior faturamento em 2018 foi Abril. A partir de julho, o faturamento se tornou quase nulo.
+- A loja Baldwin Bikes é responsável por 62% das vendas da rede em todos os anos analisados (2016 - 2018), e foi quem sofreu a maior queda em vendas.
+- A rede possui 13 mil itens em estoque, uma diferença gigantesca quando comparada com as vendas de 2018.
+- Os itens em estoque estão igualmente distribuídos entre as 3 lojas.
+- Trek e Electra são as marcas com maior volume em estoque, enquanto Cruisers Bikes e Mountain Bikes são as categorias com maior volume.
+- O estado de Nova Iorque é o que possui maior faturamento, coincidindo com a localização da loja Baldwin Bikes. Este também foi o estado com maior queda no faturamento em 2018, quando comparado com 2017.
+- Todos os estados apresentaram um comportamento semelhante em relação às vendas mensais, com um pico em Abril e uma queda brusca em julho.
+- 
 
 - Clientes que possuem um maior número de produtos ou serviços contratados apresentam maior probabilidade de encerrar suas contas, indicando possíveis desafios na experiência do cliente ou na adequação dos produtos oferecidos.
 - Clientes residentes na Alemanha demonstram uma taxa de churn superior quando comparados aos demais países analisados.
@@ -47,8 +55,3 @@ Objetivo-chave 3: Melhorar a experiência dos clientes que entram em contato com
 Objetivo-chave 4: Desenvolver e aplicar estratégias de retenção direcionadas a clientes com idade entre 36 e 60 anos, com o objetivo de reduzir a taxa de churn nesse segmento específico. Empregamos como KPI a taxa de churn por faixa etária.
 
 Objetivo-chave 5: Implementar ações de retenção voltadas a clientes com maior tempo de contrato, por meio da oferta de novos benefícios e incentivos personalizados, visando aumentar a fidelização desse público. Neste caso, os KPIs indicados são a taxa de sucesso das campanhas de retenção, a redução do churn em clientes de alto risco, o custo por cliente retido e o ROI das iniciativas de retenção.
-
-
-## :dart: Objetivo Final
-
-Nosso objetivo foi fornecer uma visão clara e orientada por dados sobre o comportamento dos clientes, auxiliando na identificação de perfis de maior risco de churn e apoiando decisões estratégicas voltadas à retenção de clientes.
