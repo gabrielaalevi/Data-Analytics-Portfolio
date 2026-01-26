@@ -25,33 +25,34 @@ Todos os painéis contam com filtros dinâmicos, permitindo a exploração dos d
 
 ## :briefcase: Análises de negócios
 
-A análise realizada por meio do dashboard permitiu identificar padrões relevantes em diversas áreas da rede. Os principais insights foram:
+A análise conduzida a partir do dashboard possibilitou a identificação de padrões relevantes em diferentes áreas da rede. Os principais insights obtidos foram os seguintes:
 
-- As vendas caíram quase 50% em 2018, quando comparadas com o volume de vendas do ano de 2017. O número de clientes atendidos caiu em 60% no mesmo período.
-- O preço médio por produto vendido aumentou em 20%. No entanto, as vendas diminuíram em 57%, o que explica a queda no faturamento.
-- O mês com maior faturamento em 2018 foi Abril. A partir de julho, o faturamento se tornou quase nulo.
-- A loja Baldwin Bikes é responsável por 62% das vendas da rede em todos os anos analisados (2016 - 2018), e foi quem sofreu a maior queda em vendas.
-- A rede possui 13 mil itens em estoque, uma diferença gigantesca quando comparada com as vendas de 2018.
-- Os itens em estoque estão igualmente distribuídos entre as 3 lojas.
-- Trek e Electra são as marcas com maior volume em estoque, enquanto Cruisers Bikes e Mountain Bikes são as categorias com maior volume.
-- O estado de Nova Iorque é o que possui maior faturamento, coincidindo com a localização da loja Baldwin Bikes. Este também foi o estado com maior queda no faturamento em 2018, quando comparado com 2017.
-- Todos os estados apresentaram um comportamento semelhante em relação às vendas mensais, com um pico em Abril e uma queda brusca em julho.
-- 
-
-- Clientes que possuem um maior número de produtos ou serviços contratados apresentam maior probabilidade de encerrar suas contas, indicando possíveis desafios na experiência do cliente ou na adequação dos produtos oferecidos.
-- Clientes residentes na Alemanha demonstram uma taxa de churn superior quando comparados aos demais países analisados.
-- Aproximadamente 99% dos clientes que registraram reclamações no serviço de atendimento ao cliente acabaram encerrando suas contas, evidenciando o impacto crítico da qualidade do suporte no processo de retenção.
-- O churn se concentra principalmente entre clientes com idade entre 36 e 60 anos, sugerindo a necessidade de estratégias específicas para esse perfil.
-- Clientes com maior tempo de contrato apresentam probabilidade de churn semelhante à de clientes mais recentes, indicando que a longevidade do relacionamento, por si só, não garante maior retenção.
+- Em 2018, as vendas apresentaram uma queda de quase 50% em relação a 2017, enquanto o número de clientes atendidos diminuiu 60% no mesmo período.
+- O preço médio por produto vendido aumentou 20%; entretanto, o volume de vendas caiu 57%, o que resultou em uma redução significativa do faturamento.
+- Abril foi o mês de maior faturamento em 2018. A partir de julho, o faturamento tornou-se praticamente inexistente.
+- A loja Baldwin Bikes concentrou 62% das vendas da rede ao longo de todo o período analisado (2016 a 2018) e foi também a unidade que registrou a maior queda nas vendas.
+- A rede mantém cerca de 13 mil itens em estoque, um volume extremamente elevado quando comparado às vendas realizadas em 2018.
+- O estoque encontra-se distribuído de forma equilibrada entre as três lojas.
+- As marcas Trek e Electra representam os maiores volumes em estoque, enquanto as categorias com maior quantidade de itens são Cruisers Bikes e Mountain Bikes.
+- O estado de Nova Iorque apresentou o maior faturamento, o que está alinhado com a localização da loja Baldwin Bikes. No entanto, também foi o estado que sofreu a maior queda de faturamento em 2018 em comparação a 2017.
+- Todos os estados exibiram um comportamento semelhante nas vendas mensais, com pico em abril e queda acentuada a partir de julho.
+- As categorias que registraram as maiores reduções de faturamento foram Road Bikes e Mountain Bikes.
+- Electric Bikes foi a categoria com maior preço médio, enquanto Children's Bikes apresentou o menor.
+- Apesar do alto preço médio, a categoria Electric Bikes esteve entre as menos vendidas em 2018.
+- Produtos da marca Trek sofreram a maior queda de faturamento, ao passo que os da marca Electra mantiveram valores praticamente estáveis.
+- A marca Trek apresentou o maior preço médio entre os produtos analisados.
+- Com excessão de Trek e Electra, as demais marcas apresentaram volumes de venda significativamente inferiores.
+- As funcionárias com maior número de vendas foram Marcelene e Venita.
+- Em termos de preço médio das vendas, as vendedoras Mireya, Kali e Layla superaram Marcelene.
 
 Desta forma, podemos definir alguns objetivos-chave (OKRs) e indicadores de desempenho (KPIs), como:
 
-Objetivo-chave 1: Reavaliar a estratégia de vendas e o portfólio de produtos, garantindo maior satisfação para clientes que contratam múltiplos serviços. Neste caso, empregamos KPIs como o número médio de produtos por cliente, a taxa de churn por número de produtos, a razão entre taxa de adesão e cancelamento, e o número de reclamações por quantidade de produtos.
+Objetivo-chave 1: Recuperar o faturamento e o volume de vendas da rede. Para alcançar esse objetivo, é fundamental reduzir a dependência da loja Baldwin Bikes, limitando sua participação a, no máximo, 50% do total de vendas. O acompanhamento poderá ser realizado por meio de KPIs como faturamento total mensal e anual, volume de vendas, número de clientes atendidos, ticket médio, além do faturamento por loja e por estado.
 
-Objetivo-chave 2: Implementar estratégias de retenção de clientes que residem na Alemanha, de forma a reduzir a taxa de churn neste país. Para este objetivo, podemos utilizar como KPI a taxa de churn por país de residência.
+Objetivo-chave 2: Aumentar a eficiência da gestão de estoque. Este objetivo visa reduzir o volume total de estoque e elevar seu giro, garantindo maior alinhamento entre estoque e demanda. A prioridade é concentrar maiores volumes nas categorias e marcas com maior potencial de venda. Os KPIs definidos incluem giro de estoque, dias médios em estoque, volume total estocado, percentual de estoque parado e distribuição do estoque por categoria e por marca.
 
-Objetivo-chave 3: Melhorar a experiência dos clientes que entram em contato com o atendimento, utilizando KPIs como o percentual de clientes que registram reclamações, a taxa de churn pós-reclamação, o tempo médio de resolução e o índice de satisfação do cliente (CSAT).
+Objetivo-chave 3: Otimizar o mix de produtos e marcas. A proposta é impulsionar as vendas das categorias Electric Bikes, Road Bikes e Mountain Bikes, além de ampliar a participação de outras marcas, de modo a reduzir a dependência das marcas Trek e Electra para, no máximo, 60% das vendas totais. Os KPIs associados a esse objetivo são faturamento por categoria e por marca, margem média por categoria, preço médio por categoria e marca, e participação percentual de cada marca no faturamento.
 
-Objetivo-chave 4: Desenvolver e aplicar estratégias de retenção direcionadas a clientes com idade entre 36 e 60 anos, com o objetivo de reduzir a taxa de churn nesse segmento específico. Empregamos como KPI a taxa de churn por faixa etária.
+Objetivo-chave 4: Reduzir a sazonalidade e equilibrar as vendas ao longo do ano. Para mitigar a concentração de vendas em poucos meses, será necessário implementar campanhas comerciais no segundo semestre, estimulando o faturamento nesse período e reduzindo a diferença entre o melhor e o pior mês do ano. Os KPIs definidos são faturamento mensal, crescimento mês a mês, desvio padrão do faturamento mensal e desempenho das campanhas nos meses de menor venda.
 
-Objetivo-chave 5: Implementar ações de retenção voltadas a clientes com maior tempo de contrato, por meio da oferta de novos benefícios e incentivos personalizados, visando aumentar a fidelização desse público. Neste caso, os KPIs indicados são a taxa de sucesso das campanhas de retenção, a redução do churn em clientes de alto risco, o custo por cliente retido e o ROI das iniciativas de retenção.
+Objetivo-chave 5: Desenvolver a performance comercial da equipe de vendas. Este objetivo busca elevar o ticket médio e diminuir a disparidade de resultados entre os vendedores, por meio de capacitação em técnicas de vendas e abordagem consultiva. Os KPIs incluem número de vendas por vendedor, faturamento e ticket médio individual, taxa de conversão (vendas por clientes atendidos) e participação de cada vendedor no faturamento total.
