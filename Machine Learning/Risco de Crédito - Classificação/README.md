@@ -1,20 +1,19 @@
 ## :dart: Descrição do Projeto
 
-Neste projeto, trabalhamos com um banco de dadaos de clientes de um banco fictício. Nosso objetivo é prever quais clientes deixaram o banco (realizaram o churn) e quais mantiveram suas contas, usando dados como score de crédito, país de residência, tempo de contrato e balanço da conta, entre outras. Com isto, é possível implementar um programa de retenção de clientes focado em especificamente em indivíduos com altas chances de deixar o banco.
-
+Neste projeto, utilizei dados reais do período de 2007 a 2010 do site LendingClub, que conecta investidores e tomadores de crédito. O principal objetivo foi identificar clientes com maior probabilidade de não quitar suas dívidas, usando dados como finalidade do empréstimo, taxa de juros, valor das parcelas, score de crédito, entre outras. Com isto, é possível classificar tais clientes como empréstimos de risco.
 O banco de dados contém as seguintes colunas:
 
 | Variável | Tipo | Descrição |
 | -------- | ---- | ----------- |
-|**Customer Id** (Id do cliente) | int | Número que identifica cada cliente. |
-|**Surname** (Sobrenome) | str | Sobrenome do cliente.|
-|**Credit Score** (Score de crédito) | int | Score de crédito do cliente no banco.|
-|**Geography** (Geografia)| str | País de residência do cliente.|
-|**Gender** (Gênero)| str | Gênero do cliente.|
-|**Age** (Idade) | int | Idade do cliente.|
-|**Tenure** (Tempo de contrato)| int | Tempo de contrato do cliente com o banco.|
-|**Balance** (Saldo) | float| Saldo da conta do cliente.|
-|**Number of Products** (Número de produtos)| int | Número de serviços do banco contratados pelo cliente.|
+|**Credit Policy** (Política de crédito) | int | Determina se o cliente se adequa às políticas de crédito do site. 1 se o cliente se adequa a tais políticas, 0 se não. |
+|**Purpose** (Propósito) | str | Propósito do empréstimo.|
+|**Interest Rate** (Taxa de juros) | float | Taxa de juros aplicada ao empréstimo.|
+|**Installment** (Parcela)| float | Valor da parcela mensal de pagamento.|
+|**Annual Income** (Renda anual)| float | Renda anual do cliente, conforme informado pelo próprio.|
+|**DTI** | float | Razão entre o valor da dívida e a renda anual do cliente.|
+|**FICO** (Pontos FICO)| int | Número de pontos FICO (score) do cartão de crédito.|
+|**Days with CR line** (Dias com linha de crédito) | int | Número de dias desde que o cliente criou sua conta de crédito.|
+|**Revol Bal** (Crédito rotativo)| float | Valor do crédito rotativo do cliente (o valor restante na conta após o pagamento .|
 |**Has Credit Card** (Tem cartão de crédito) | int | Se o cliente possui um cartão de crédito ou não. Esta variável já vem com one-hot encoding, onde 1 representa clientes com cartão de crédito e 0 clientes que não possuem cartão de crédito. |
 |**Is Active Member** (É membro ativo) | int | Se o cliente é um membro ativo (representado por 1) ou não (representado por 0).|
 |**Estimated Salary** (Salário estimado) | float| Salário estimado do cliente.|
