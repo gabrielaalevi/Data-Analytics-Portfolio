@@ -1,4 +1,4 @@
-:pushpin: Descrição do Projeto
+## :pushpin: Descrição do Projeto
 
 Este projeto consiste no desenvolvimento de um dashboard interativo em Power BI para a análise de dados sobre a satisfação de clientes de uma companhia aérea fictícia. O principal objetivo foi colocar em prática e aprimorar minhas habilidades com Power BI, especialmente na análise e visualização de dados relacionados à experiência do cliente, buscando transformar dados brutos em informações claras e visuais para tomada de decisão.
 
