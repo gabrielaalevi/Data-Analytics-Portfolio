@@ -6,24 +6,7 @@ A partir da análise dos indicadores financeiros, foi possível identificar opor
 
 ## :file_folder: Arquivos Disponíveis
 
-- **Dashboard em Power BI (.pbix):** versão interativa do relatório, permitindo a exploração dos indicadores e dos resultados por meio de filtros dinâmicos.
 - **Arquivo PDF:** contém capturas de tela dos painéis do dashboard para consulta e visualização rápida.
-
-## :triangular_ruler: Estrutura do Dashboard
-
-O dashboard foi desenvolvido para possibilitar a análise do desempenho financeiro da empresa sob diferentes perspectivas, incluindo:
-
-1. **Visão Geral:** apresentação dos principais indicadores de desempenho, como receita, despesas, lucro e margem de lucro.
-
-2. **Análise Temporal:** comparação dos resultados financeiros entre diferentes períodos, com destaque para a investigação da queda no lucro em dezembro.
-
-3. **Análise por Categoria de Produto:** avaliação das receitas e despesas médias por categoria, permitindo identificar segmentos com possíveis problemas de rentabilidade.
-
-4. **Análise por Vendedora:** comparação do desempenho financeiro das vendas realizadas por cada vendedora, identificando oportunidades de melhoria na composição dos produtos vendidos.
-
-5. **Análise por Canal de Venda:** comparação dos resultados entre os canais online e as lojas físicas, com foco nas diferenças de margem de lucro.
-
-Os painéis contam com segmentadores de dados que permitem explorar os indicadores por diferentes períodos e categorias, facilitando a investigação dos resultados e a identificação de padrões.
 
 ### :computer: Recursos técnicos utilizados
 
