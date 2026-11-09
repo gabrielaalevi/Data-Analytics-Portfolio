@@ -4,7 +4,19 @@ Bem vindo(a) ao meu portfolio de projetos! Aqui, centralizo todos os meus projet
 
 ## :book: Sumário
 
-1. [Análise da Variação de Lucros](https://github.com/gabrielaalevi/Data-Analytics-Portfolio/tree/main/Power%20BI/An%C3%A1lise%20de%20Varia%C3%A7%C3%A3o%20de%20Lucros)
+1. [Dashboard de Variação de Lucros - Power BI](https://github.com/gabrielaalevi/Data-Analytics-Portfolio/tree/main/Power%20BI/An%C3%A1lise%20de%20Varia%C3%A7%C3%A3o%20de%20Lucros)
+2. [Dashboard de Vendas de E-commerce - Power BI](https://github.com/gabrielaalevi/Data-Analytics-Portfolio/tree/main/Power%20BI/An%C3%A1lise%20de%20Vendas%20de%20E-commerce)
+3. [Dashboard de Vendas de Bicicletas - Power BI](https://github.com/gabrielaalevi/Data-Analytics-Portfolio/tree/main/Power%20BI/Relat%C3%B3rio%20de%20Vendas%20-%20Loja%20de%20Bicicletas)
+4. [Dashboard de Retenção de Clientes - Power BI](https://github.com/gabrielaalevi/Data-Analytics-Portfolio/tree/main/Power%20BI/Reten%C3%A7%C3%A3o%20de%20Clientes)
+5. [Dashboard de Satisfação de Clientes - Power BI](https://github.com/gabrielaalevi/Data-Analytics-Portfolio/tree/main/Power%20BI/Satisfa%C3%A7%C3%A3o%20em%20Companhia%20A%C3%A9rea)
+6. [Análise de Retenção de Clientes - Machine Learning](https://github.com/gabrielaalevi/Data-Analytics-Portfolio/tree/main/Machine%20Learning/Reten%C3%A7%C3%A3o%20de%20Clientes%20-%20Classifica%C3%A7ao)
+7. [Análise de Risco de Crédito - Machine Learning](https://github.com/gabrielaalevi/Data-Analytics-Portfolio/tree/main/Machine%20Learning/Risco%20de%20Cr%C3%A9dito%20-%20Classifica%C3%A7%C3%A3o)
+8. [Análise dos Impactos de Redes Sociais na Felicidade - Machine Learning](https://github.com/gabrielaalevi/Data-Analytics-Portfolio/tree/main/Machine%20Learning/Uso%20de%20Redes%20Sociais%20e%20Felicidade%20-%20Regress%C3%A3o)
+9. [Classificação de Imagens de Peças de Roupas - Redes Neurais](https://github.com/gabrielaalevi/Data-Analytics-Portfolio/tree/main/Redes%20Neurais/Classifica%C3%A7%C3%A3o%20de%20Imagens%20-%20Roupas)
+10. [Análise de Vendas de Bicicletas - SQL](https://github.com/gabrielaalevi/Data-Analytics-Portfolio/tree/main/SQL/An%C3%A1lise%20de%20Vendas%20de%20Bicicletas)
+11. [Análise da Satisfação de Clientes - SQL](https://github.com/gabrielaalevi/Data-Analytics-Portfolio/tree/main/SQL/Satisfa%C3%A7%C3%A3o%20de%20Clientes%20em%20Companhia%20A%C3%A9rea)
+12. [Dashboard de Vendas de Café - Excel](https://github.com/gabrielaalevi/Data-Analytics-Portfolio/tree/main/Excel/Dashboard%20Relat%C3%B3rio%20de%20Vendas%20de%20Caf%C3%A9)
+13. [Dashboard de Vendas da XBox - Excel](https://github.com/gabrielaalevi/Data-Analytics-Portfolio/tree/main/Excel/Dashboard%20de%20Vendas%20Xbox)
 
 ## :bookmark_tabs: Sobre mim
 
