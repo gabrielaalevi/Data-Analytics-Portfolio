@@ -2,6 +2,10 @@
 
 Bem vindo(a) ao meu portfolio de projetos! Aqui, centralizo todos os meus projetos pessoais de Análise de Dados e de Machine Learning. Os projetos são organizados por pastas, cada uma com o código principal do projeto e um documento de texto explicando os objetivos e a execução do trabalho.
 
+## :book: Sumário
+
+1. [Análise da Variação de Lucros](https://github.com/gabrielaalevi/Data-Analytics-Portfolio/tree/main/Power%20BI/An%C3%A1lise%20de%20Varia%C3%A7%C3%A3o%20de%20Lucros)
+
 ## :bookmark_tabs: Sobre mim
 
 Prazer! Meu nome é Gabriela, e sou analista de dados júnior. Sou formada em Física e em Ciência & Tecnologia pela Universidade Federal do ABC (UFABC), trajetória que me proporcionou sólida experiência em modelagem estatística, programação em Python e análise de grandes volumes de dados. Paralelamente, aprofundei meus conhecimentos em ferramentas essenciais para ciência e análise de dados, como SQL, Power BI, Excel e técnicas de Machine Learning, utlizando bibliotecas como scikit-learn e PyTorch. Para aplicar esses aprendizados, desenvolvo projetos próprios de análise e modelagem, disponíveis neste portfolio. Isto me permite testar conceitos e identificar pontos de melhoria. Sou apaixonada por desafios analíticos que exigem lógica, clareza e atenção aos detalhes. 
